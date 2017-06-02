@@ -2,23 +2,23 @@ package br.com.modelo;
 
 import br.com.generico.BoletoBuilder;
 
-public class BBBoletoBuilder implements BoletoBuilder {
+public class BradescoBoletoBuilder implements BoletoBuilder {
 
 	private Boleto boleto;	
 	
-	public BBBoletoBuilder() {
+	public BradescoBoletoBuilder() {
 		this.boleto = new Boleto();
 	}
-
+	
 	public void setBoleto(Boleto boleto) {
 		this.boleto = boleto;
 	}
-	
+
 	@Override
 	public Boleto getBoleto() {
-		// TODO Auto-generated method stub
 		return getBoleto();
 	}
+	
 	@Override
 	public void buildSacado(String sacado) {
 		getBoleto().setSacado(sacado);

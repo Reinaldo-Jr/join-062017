@@ -9,9 +9,17 @@ public class MainBoleto {
 	
 	public static void main(String[] args) {
 		
-		Boleto boleto = new Boleto("Cedente", "Sacado", "Cod Barras", 289);
-		GeradorDeBoleto.gerarBoleto(new BBBoletoBuilder(), boleto);
-		GeradorDeBoleto.gerarBoleto(new ItauBoletoBuilder(), boleto);
+		Boleto boleto = GeradorDeBoleto.gerarBoleto(new BBBoletoBuilder());
+		System.out.println(boleto.getCedente());
+		System.out.println(boleto.getSacado());
+		System.out.println(boleto.getCodBarras());
+		System.out.println(boleto.getValor());
+		
+		boleto = GeradorDeBoleto.gerarBoleto(new ItauBoletoBuilder());
+		System.out.println(boleto.getCedente());
+		System.out.println(boleto.getSacado());
+		System.out.println(boleto.getCodBarras());
+		System.out.println(boleto.getValor());
 		
 	}
 

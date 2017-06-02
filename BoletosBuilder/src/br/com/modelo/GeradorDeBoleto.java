@@ -4,12 +4,14 @@ import br.com.generico.BoletoBuilder;
 
 public class GeradorDeBoleto {	
 
-	public static void gerarBoleto(BoletoBuilder Builder, Boleto boleto) {
+	public static Boleto gerarBoleto(BoletoBuilder builder) {
 		
-		Builder.imprimirSacado(boleto.getSacado());
-		Builder.imprimirCedente(boleto.getCedente());
-		Builder.imprimirCodigoBarras(boleto.getCedente());
-		Builder.imprimirValor(boleto.getValor());
+		builder.buildSacado("Reinaldo Jr");
+		builder.buildCedente("WALMART");
+		builder.buildCodigoBarras("1111.1111.11111.11.11111");
+		builder.buildValor(2000);
+		
+		return builder.getBoleto();
 		
 	}
 	

@@ -7,6 +7,9 @@ public class Boleto {
 	private String codBarras;
 	private double valor;
 	
+	public Boleto() {
+		super();	
+	}
 	
 	public Boleto(String cedente, String sacado, String codBarras, double valor) {
 		super();

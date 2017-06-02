@@ -4,28 +4,39 @@ import br.com.generico.BoletoBuilder;
 
 public class ItauBoletoBuilder implements BoletoBuilder {
 
-	@Override
-	public void imprimirSacado(String sacado) {
-		System.out.println("[ITAU] Imprimindo Sacado "+sacado);
-
+	private Boleto boleto;	
+	
+	public ItauBoletoBuilder() {
+		this.boleto = new Boleto();
+	}
+	
+	public void setBoleto(Boleto boleto) {
+		this.boleto = boleto;
 	}
 
 	@Override
-	public void imprimirCedente(String cedente) {
-		System.out.println("[ITAU] Imprimindo Cedente "+cedente);
-
+	public Boleto getBoleto() {
+		return getBoleto();
+	}
+	
+	@Override
+	public void buildSacado(String sacado) {
+		getBoleto().setSacado(sacado);
 	}
 
 	@Override
-	public void imprimirCodigoBarras(String codigoBarras) {
-		System.out.println("[ITAU] Imprimindo Codigo de Barras "+codigoBarras);
-
+	public void buildCedente(String cedente) {
+		getBoleto().setCedente(cedente);
 	}
 
 	@Override
-	public void imprimirValor(double valor) {
-		System.out.println("[ITAU] Imprimindo Valor "+valor);
+	public void buildCodigoBarras(String codigoBarras) {
+		getBoleto().setCodBarras(codigoBarras);
+	}
 
+	@Override
+	public void buildValor(double valor) {
+		getBoleto().setValor(valor);
 	}
 
 }

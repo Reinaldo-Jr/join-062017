@@ -1,10 +1,13 @@
 package br.com.generico;
 
+import br.com.modelo.Boleto;
+
 public interface BoletoBuilder {
 	
-	public void imprimirSacado(String sacado);
-	public void imprimirCedente(String cedente);
-	public void imprimirCodigoBarras(String codigoBarras);
-	public void imprimirValor(double valor);
+	public void buildSacado(String sacado);
+	public void buildCedente(String cedente);
+	public void buildCodigoBarras(String codigoBarras);
+	public void buildValor(double valor);
+	public Boleto getBoleto();
 
 }
