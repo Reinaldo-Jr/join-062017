@@ -16,7 +16,7 @@ public class ItauBoletoBuilder implements BoletoBuilder {
 
 	@Override
 	public Boleto getBoleto() {
-		return getBoleto();
+		return boleto;
 	}
 	
 	@Override

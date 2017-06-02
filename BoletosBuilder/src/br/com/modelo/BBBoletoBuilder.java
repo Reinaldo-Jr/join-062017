@@ -17,7 +17,7 @@ public class BBBoletoBuilder implements BoletoBuilder {
 	@Override
 	public Boleto getBoleto() {
 		// TODO Auto-generated method stub
-		return getBoleto();
+		return boleto;
 	}
 	@Override
 	public void buildSacado(String sacado) {

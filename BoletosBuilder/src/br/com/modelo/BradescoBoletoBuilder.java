@@ -16,7 +16,7 @@ public class BradescoBoletoBuilder implements BoletoBuilder {
 
 	@Override
 	public Boleto getBoleto() {
-		return getBoleto();
+		return boleto;
 	}
 	
 	@Override
